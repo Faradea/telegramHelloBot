@@ -51,7 +51,6 @@ def main():
 
         last_update = greet_bot.get_last_update()
 
-        print last_update
         if last_update:
             last_chat_text = None
             last_chat_id = None
@@ -62,7 +61,7 @@ def main():
                 last_chat_id = last_chat_message.get('chat').get('id')
 
             if last_chat_text:
-                print last_update['message']['text'].lower().encode('utf8')
+                print(last_update['message']['text'].lower().encode('utf8'))
                 if last_update['message']['text'].lower().encode('utf8') == trigger_request:
                     greet_bot.send_message(last_chat_id, trigger_response)
 
