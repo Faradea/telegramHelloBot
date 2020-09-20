@@ -62,8 +62,9 @@ def main():
 
             if last_chat_text:
                 print(last_update['message']['text'].lower().encode('utf8'))
-                if last_update['message']['text'].lower().encode('utf8') == trigger_request:
-                    greet_bot.send_message(last_chat_id, trigger_response)
+                # if last_update['message']['text'].lower().encode('utf8') == trigger_request:
+                #     greet_bot.send_message(last_chat_id, trigger_response)
+                greet_bot.send_message(last_chat_id, last_chat_text)
 
             new_offset = last_update_id + 1
 
