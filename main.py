@@ -14,7 +14,7 @@ class BotHandler:
         params = {'timeout': timeout, 'offset': offset, 'allowed_updates': 'message'}
         resp = requests.get(self.api_url + method, params)
         result_json = resp.json()['result']
-        print result_json
+        print(result_json)
         return result_json
 
     def send_message(self, chat_id, text):
